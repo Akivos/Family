@@ -31,6 +31,27 @@ class Members:
 	def __str__(self):
 		return f"{self.first_name}. Hobby - {self.hobby}"
 
+class Parent(Members):
+	def __init__(self, first_name, middle_name, age, hobby, similar_kids=None):
+		super().__init__(first_name, middle_name, age, hobby)
+		if similar_kids is None:
+			self.similar_kids = []
+		else:
+			self.similar_kids = similar_kids
 
+	def add_kid(self, kid):
+		if kid not in self.similar_kids:
+			self.similar_kids.append(kid)
 
+	def remove_kid(self, kid):
+		if kid in self.similar_kids:
+			self.similar_kids.remove(kid)
 
+	def print_kids(self):
+		for kid in self.similar_kids:
+			print(kid.full_name)
+
+member1 = Members("Meir", "Shneior", 24, "Soccer")
+dad = Parent("Zion", "Saaid", 52, "Science")
+dad.add_kid(member1)
+dad.print_kids()

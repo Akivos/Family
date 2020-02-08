@@ -1,11 +1,12 @@
 import unittest
-from family_members import Members
+from family_members import Members 
 
 class TestFamily(unittest.TestCase):
 
 	def setUp(self):
 		self.member1 = Members("Meir", "Shneior", 24, "Soccer")
 		self.member2 = Members("Akiva", "Nissim", 22, "Music")
+
 
 	def test_firtsname(self):
 		self.assertEqual(self.member1.first_name, "Meir")
@@ -30,9 +31,6 @@ class TestFamily(unittest.TestCase):
 	def test_email(self):
 		self.assertEqual(self.member1.email, "Meir.24@gmail.com")
 		self.assertEqual(self.member2.email, "Akiva.22@gmail.com")
-
-
-
 
 
 
