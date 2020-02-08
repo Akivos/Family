@@ -23,6 +23,10 @@ class TestFamily(unittest.TestCase):
 		self.assertEqual(self.member1.hobby, "Soccer")
 		self.assertEqual(self.member2.hobby, "Music")
 
+	def test_fullname(self):
+		self.assertEqual(self.member1.full_name, "Meir Shneior")
+		self.assertEqual(self.member2.full_name, "Akiva Nissim")
+
 	def test_email(self):
 		self.assertEqual(self.member1.email, "Meir.24@gmail.com")
 		self.assertEqual(self.member2.email, "Akiva.22@gmail.com")
@@ -34,5 +38,7 @@ class TestFamily(unittest.TestCase):
 
 if __name__ == "__main__":
 	unittest.main()
+
+
 
 
