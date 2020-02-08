@@ -33,8 +33,4 @@ class Members:
 
 
 
-member = Members("Shimon", "Menachem", 18, "Learning")
-member.full_name = "Ayelet Hashahar"
-print(member.middle_name)
-
 
