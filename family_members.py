@@ -51,7 +51,3 @@ class Parent(Members):
 		for kid in self.similar_kids:
 			print(kid.full_name)
 
-member1 = Members("Meir", "Shneior", 24, "Soccer")
-dad = Parent("Zion", "Saaid", 52, "Science")
-dad.add_kid(member1)
-dad.print_kids()
